@@ -5,53 +5,39 @@ layout: default
 <!--- Hero Section --->
 <section class="hero-container main-background-colour">
   <div class="hero-wrapper">
-    <p class="hero-message">Hello there, we're Localtoast. We're an independant game development company. This is not a picture of our office, but isn't it the coolest?</p>
-    <a href="#projects" class="button outline-button main-text-colour"><i class="fas fa-desktop"></i> Current Projects</a>
-    <a href="#contact" class="button outline-button main-text-colour"><i class="fab fa-twitter"></i> Follow us on Twitter</a>
+    <p class="hero-message">Hello there! We're Localtoast, an independant game development company. We build quality software. It's way more fun than it sounds.</p>
+    <a href="https://www.patreon.com/localtoastgames" target="_blank" class="button patreon-button"><i class="fab fa-patreon"></i> Patreon</a>
+    <a href="http://www.twitter.com/localtoastgames" target="_blank" class="button twitter-button"><i class="fab fa-twitter"></i> Twitter</a>
+    <a href="#" target="_blank" class="button discord-button"><i class="fab fa-discord"></i> Discord</a>
   </div>
 </section>
 <!--- End Hero Section --->
 
-<!--- About Section --->
-<section id="about" class="about-container">
-  <div class="about-wrapper">
-    <h2>Learn More About Me</h2>
-    <p>Welcome to my design portfolio. I'm a passionate web and graphic designer, but I also specialize in web development and branding. I spend most of my day making beautiful interfaces, but I also play pixel basketball over on the courts at Dribbble. I've always been passionate about design so that's why at the early age of fifteen I started to teach myself design. At first I wanted to teach myself graphic design, but a couple of years later I started to get a strong passion for web design. I created my first website in high school, it wasn't very good, but I was excited and it wasn't very long until I wanted to make another one and since then I've never wanted to stop. If you like what you see on my website, then feel free to contact me, I would love to hear from you.</p>
-  </div>
-  <div class="about-images-wrapper">
-    <img src="/assets/images/angular.svg" alt="Angular" />
-    <img src="/assets/images/1024px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" />
-    <img src="/assets/images/CSS3_logo_and_wordmark.svg.png" alt="CSS3" />
-    <i class="fas fa-server fa-7x"></i>
-    <br class="clear-both">
-  </div>
-</section>
-<!--- End About Section --->
-
-<!--- Portfolio  Section --->
+<!--- Project  Section --->
 <section id="projects" class="project-thumbnail-container">
   <div class="about-wrapper">
-    <h2>Featured Design Projects</h2>
-    <p>Great design is at the core of everything that I create. Whether its brand development or web design, watch me develop your ideas into something that will communicate your message and capture your imagination. I have very high quality standards for my designs so that you will get the best design possible with pixel perfect details. Below are some of my latest projects that I've done from web design to brand development.</p>
+    <h2>Featured Projects</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
   <div class="project-thumbnail-wrapper">
     <!--- Thumbnail Item --->
     <div class="thumbnail">
-      <a href="projects/project-lich.html">
+      <h3>Current Project</h3>
+      <a href="projects/project-vantage.html">
         <div class="thumbnail-image">
           <!--- Thumbnail Image --->
-          <img src="images/thumbnails/thumbnail-image-01.jpg"
-          data-at2x="images/thumbnails/thumbnail-image-01@2x.jpg" alt="Project LICH" />
+          <img src="/assets/images/vantage-thumb.jpg" alt="Project: VANTAGE" />
           <div class="thumbnail-overlay">
             <!--- Thumbnail Hover Text --->
-            <span class="thumbnail-title">Project LICH</span>
-            <span class="thumbnail-category">Digital Tabletop</span>
+            <span class="thumbnail-title">Project: VANTAGE</span>
+            <span class="thumbnail-category">A Better Digital Tabletop for Dungeons <i class="fab fa-d-and-d"></i> Dragons</span>
           </div>
         </div>
       </a>
     </div>
     <!--- Thumbnail Item --->
     <div class="thumbnail">
+      <h3>Past Project</h3>
       <a href="projects/aeons-of-ascension.html">
         <div class="thumbnail-image">
           <!--- Thumbnail Image --->
@@ -69,28 +55,45 @@ layout: default
 </section>
 <!--- End Portfolio Section --->
 
-<!--- Contact Section --->
-<section id="contact" class="contact-container">
-  <div class="contact-wrapper">
-    <h2>Have A Question? Let's Talk</h2>
-    <p>Whether you have a question, work inquiry, or simply want to connect then don't hesitate to message me using the contact form located below or sending me a message on Twitter for a faster response. I'm looking forward to hearing from you, but please allow several days for a response.</p>
-    <form class="contact-form" action="php/mail.php" method="POST" autocomplete="off">
-      <div class="form-field-left">
-        <input id="fullName" name="fullName" type="text" value="" placeholder="Full Name"/><br>
-        <span id="fullName-validation" class="error-message"></span>
-      </div>
-      <div class="form-field-right">
-        <input id="email" name="email" type="text" value="" placeholder="Email Address"/><br>
-        <span id="email-validation" class="error-message"></span>
-      </div>
-      <textarea id="message" name="message" placeholder="How can I help you?"></textarea><br>
-      <span id="message-validation" class="error-message"></span>
-      <input class="button solid-button" id="send" type="submit" value="Send Message"/>
-    </form>
-    <br class="clear-both">
+<!--- About Section --->
+<section id="about" class="about-container">
+  <div class="about-wrapper">
+    <h2>About Us</h2>
+    <p>The Localtoast team has over 3 decades of software design and development experience. Building awesome, intuitive software used by millions is what we do everyday. But we also love games. What happens when you take years of expertise and fuel it with a passionate love for gaming? Localtoast Gaming Co... that's what happens.</p>
+  </div>
+  <div class="about-images-wrapper">
+    <div>
+      <p>Quality Design</p>
+      <div class="step-design"></div>
+    </div>
+    <div>
+      <p>User-focused</p>
+      <div class="step-ux"></div>
+    </div>
+    <div>
+      <p>Modern Technogies</p>
+      <div class="step-tech"></div>
+    </div>
+    <div>
+      <p>Cross-platform</p>
+      <div class="step-deploy"></div>
+    </div>
   </div>
 </section>
-<!--- End Contact Section --->
+<!--- End About Section --->
+
+<!--- Support Section --->
+<section id="support" class="support-container">
+  <div class="support-wrapper text-center">
+    <h2>Want to support Localtoast?</h2>
+    <p>First of all, THANK YOU SO MUCH! <i class="fas fa-grin-alt"></i> There is no way we could do what we do without your support.<br> Until we get our Kickstarter underway... the best way to support us is through our Pateron.</p>
+  </div>
+  <a href="https://www.patreon.com/localtoastgames" target="_blank" class="support-cta">
+    <img src="/assets/images/Patreon_Navy.svg" alt="" height="80px">
+    <img src="/assets/images/local-toast-logo.svg" alt="" height="80px">
+  </a>
+</section>
+<!--- End Support Section --->
 
 
 
