@@ -1,0 +1,38 @@
+<!--- Footer --->
+<footer>
+  <div class="footer-wrapper">
+    <ul>
+      <li><a href="http://www.twitter.com/localtoastgames" target="_blank">Twitter</a></li>
+    </ul>
+    <p>Copyright &copy; 2018 Localtoast Gaming Company</p>
+  </div>
+  <br class="clear-both">
+</footer>
+<!--- End Footer --->
+
+<!--- Javascript Files --->
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/retina.js"></script>
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+<script type="text/javascript" src="/assets/js/validate.js"></script>
+<script type="text/javascript" src="/assets/js/validation.js"></script>
+<!--- End Javascript Files --->
+
+<!--- Script to close mobile navigation when a link is clicked  --->
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+  var $menu_toggle = $('.menu-toggle'),
+  $menu_item = $('.mobile-navigation li a');
+
+  $menu_item.on('click', function(event){
+  event.preventDefault();
+
+  $menu_toggle.toggleClass('clicked');
+    $(".secondary-navigation").toggleClass("slide-content-down");
+    $(".mobile-navigation").toggleClass("show-secondary-navigation");
+  });
+
+  });
+</script>
+<!--- End Script --->
