@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+  <body>
+
+    {%- include header.html -%}
+    
+    <!-- - Hero Section - -->
+    <section class="hero-container main-background-colour secondary-page">
+      <div class="hero-wrapper">
+        <p class="hero-message">{{ page.title }}</p>
+      </div>
+    </section>
+    <!-- - End Hero Section - -->
+    
+    {{ content }}
+    
+    {%- include footer.html -%}
+  </body>
+</html>

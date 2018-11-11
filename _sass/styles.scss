@@ -1,12 +1,4 @@
 /*  ==========================================================================
-
-Template Name: One Page Portfolio
-Release Date: 30/11/2017
-Version: 1.0
-Created by: JohnnyTheDesigner
-Demo: www.johnnythedesigner.com/templates/one-page-portfolio/
-
-============================================================================
 Table of Contents
 ============================================================================
 
@@ -127,6 +119,11 @@ body {
 
 a {
   text-decoration: none;
+  color: #AD6B1A;
+}
+
+strong {
+  font-weight: bold;
 }
 
 .overflow-hidden {
@@ -136,12 +133,18 @@ a {
 .clear-both {
   clear: both;
 }
+
 .text-center {
   text-align: center;
 }
 /*  ==================================
 1.1 - Text Selection Colour
 ==================================  */
+::-moz-selection {
+  background: #333;
+  color: #FFF;
+}
+
 ::selection {
   background: #333;
   color: #FFF;
@@ -281,6 +284,7 @@ $discord:  #7289da !default;
   font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.1em;
+  white-space: nowrap;
   .svg-inline--fa {
     margin-right: 0.5rem;
   }
@@ -388,11 +392,13 @@ $discord:  #7289da !default;
     width: 200px;
     height: 200px;
     background-image: url("/assets/images/local-toast-logo.svg");
-    filter: drop-shadow(0px 3px 6px rgba(0,0,0,.5));
+    -webkit-filter: drop-shadow(0px 3px 6px rgba(0,0,0,.5));
+            filter: drop-shadow(0px 3px 6px rgba(0,0,0,.5));
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    transition: margin-top .1s;
+    -webkit-transition: all .1s;
+    transition: all .1s;
     &:hover {
       margin-top: -3px;
     }
@@ -401,41 +407,33 @@ $discord:  #7289da !default;
 
 .desktop-navigation {
   height: 100%;
-  display: none;
   float: right;
-}
-
-.desktop-navigation ul {
-  height: 100%;
-}
-
-.desktop-navigation ul li {
-  display: inline-block;
-  margin-left: 50px;
-}
-
-.desktop-navigation ul li a {
-  font-weight: 900;
-  line-height: 70px;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: $gray-800;
-  letter-spacing: 0.15em;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.desktop-navigation ul li a:hover {
-  color: $gray-600;
-  cursor: pointer;
-}
-
-.desktop-navigation {
   display: block;
+  ul {
+    height: 100%;
+    li {
+      display: inline-block;
+      margin-left: 50px;
+      a {
+        font-weight: 900;
+        line-height: 70px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $gray-800;
+        letter-spacing: 0.15em;
+        text-decoration: none;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: $gray-600;
+          cursor: pointer;
+        }
+        &.highlight {
+          color: #AD6B1A;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -449,7 +447,19 @@ $discord:  #7289da !default;
     display: none;
   }
   .logo {
-    line-height: 60px;
+    width: 35%;
+    div {
+      width: 100%;
+      height: 120px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    div {
+      height: 80px;
+    }
   }
 }
 
@@ -472,9 +482,6 @@ $discord:  #7289da !default;
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   width: 18px;
   height: 2px;
@@ -495,18 +502,12 @@ $discord:  #7289da !default;
 .menu-toggle .menu-icon::before {
   bottom: 5px;
   -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
 .menu-toggle .menu-icon::after {
   top: 5px;
   -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
@@ -522,28 +523,16 @@ $discord:  #7289da !default;
 .menu-toggle.clicked .menu-icon::before {
   bottom: 0;
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .menu-toggle.clicked .menu-icon::after {
   top: 0;
   -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -561,9 +550,6 @@ $discord:  #7289da !default;
   left: auto;
   right: 1.25em;
   -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -585,14 +571,8 @@ $discord:  #7289da !default;
   margin-top: 60px;
   display: none;
   -webkit-transform: translateY(-360px);
-  -ms-transform: translateY(-360px);
-  -moz-transform: translateY(-360px);
-  -o-transform: translateY(-360px);
   transform: translateY(-360px);
   -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
@@ -619,9 +599,6 @@ $discord:  #7289da !default;
   color: $gray-400;
   letter-spacing: 0.2em;
   -webkit-transition: all 0.2s ease 0s;
-  -moz-transition: all 0.2s ease 0s;
-  -ms-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
 
@@ -633,23 +610,14 @@ $discord:  #7289da !default;
 
 .slide-content-down {
   -webkit-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  -o-transform: translateY(0px);
   transform: translateY(0px);
   -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
 .show-secondary-navigation {
   opacity: 1;
   -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
@@ -660,9 +628,6 @@ $discord:  #7289da !default;
     display: block;
     padding: 0;
     -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -ms-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
   .menu-toggle:hover {
@@ -729,9 +694,6 @@ footer a {
   letter-spacing: 0.1em;
   text-decoration: none;
   -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -774,12 +736,28 @@ footer a:hover {
   height: auto;
   background-image: url('/assets/images/site-bkg.jpg');
   background-size: cover;
+  &.secondary-page {
+    padding: 70px 0 50px 0;
+    .hero-message {
+      text-align: right;
+      max-width: none;
+      font-size: 36px;
+    }
+  }
+}
+
+.hero-container-aoa {
+  background-image: url('/assets/i  mages/aoa-hero.png');
 }
 
 .hero-wrapper {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 40px;
+  a {
+    padding: 8px 16px;
+    margin: 0 15px 15px 0;
+  }
 }
 
 .hero-message {
@@ -791,20 +769,27 @@ footer a:hover {
   font-weight: 700;
 }
 
-.hero-wrapper a {
-  padding: 8px 16px;
-  margin-right: 15px;
-}
-
 @media only screen and (max-width: 800px) {
   .hero-container {
     padding: 100px 0 130px 0;
+    &.secondary-page {
+      padding: 40px 0 10px 0;
+      .hero-message {
+        font-size: 28px;
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 500px) {
   .hero-container {
-    padding: 50px 0 60px 0;
+    padding: 60px 0 60px 0;
+    &.secondary-page {
+      padding: 40px 0 1px 0;
+      .hero-message {
+        font-size: 24px;
+      }
+    }
   }
   .hero-wrapper {
     padding: 0 20px;
@@ -852,8 +837,92 @@ footer a:hover {
 }
 
 .about-images-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  > div {
+    margin: 0 2rem;
+    width: 15%;
+    p {
+      font-size: 12px;
+      margin-bottom: .75rem;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    img {
+      margin-bottom: 1rem;
+      -webkit-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      -webkit-filter: saturate(0%);
+              filter: saturate(0%);
+      &:hover {
+        -webkit-filter: saturate(100%);
+                filter: saturate(100%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about-container {
+    padding: 45px 0 40px 0;
+  }
+  .about-wrapper p {
+    margin-bottom: 30px;
+  }
+  .about-images-wrapper {
+    > div {
+      width: 30%;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about-wrapper {
+    padding: 0 20px;
+  }
+  .about-images-wrapper {
+    padding: 0 10px;
+  }
+}
+
+/*  ==========================================================================
+8.1 - Article Section
+==========================================================================  */
+.article-container {
+  padding: 80px 0 75px 0;
+}
+
+.article-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.article-wrapper p {
+  margin-bottom: 45px;
+}
+
+.article-images-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.article-images-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   > div {
     p {
       font-size: 12px;
@@ -868,30 +937,6 @@ footer a:hover {
       background-size: contain;
       background-repeat: no-repeat;
     }
-    .step-design {
-      background-image: url("/assets/images/step-design-off.png");
-      &:hover {
-        background-image: url("/assets/images/step-design.png");
-      }
-    }
-    .step-ux {
-      background-image: url("/assets/images/step-ux-off.png");
-      &:hover {
-        background-image: url("/assets/images/step-ux.png");
-      }
-    }
-    .step-tech {
-      background-image: url("/assets/images/step-tech-off.png");
-      &:hover {
-        background-image: url("/assets/images/step-tech.png");
-      }
-    }
-    .step-deploy {
-      background-image: url("/assets/images/step-deploy-off.png");
-      &:hover {
-        background-image: url("/assets/images/step-deploy.png");
-      }
-    }
     margin: 0 2rem;
     width: 15%;
     height: 100%;
@@ -899,28 +944,28 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  .about-container {
+  .article-container {
     padding: 45px 0 40px 0;
   }
-  .about-wrapper p {
+  .article-wrapper p {
     margin-bottom: 30px;
   }
-  .about-images-wrapper img {
+  .article-images-wrapper img {
     float: left;
     width: 50%;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .about-wrapper {
+  .article-wrapper {
     padding: 0 20px;
   }
-  .about-images-wrapper {
+  .article-images-wrapper {
     padding: 0 10px;
   }
 }
 
-/*  ==========================================================================
+ /*  ==========================================================================
 09 - Portfolio Section
 ==========================================================================  */
 .project-thumbnail-container {
@@ -1064,10 +1109,16 @@ footer a:hover {
   max-width: 300px;
   margin: 40px auto;
   padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: inherit;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   img:first-child {
     margin-right: 30px;
   }
@@ -1104,15 +1155,9 @@ input, textarea {
   color: #8C8C8C;
   font-size: 14px;
   letter-spacing: 0.02em;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-transition: 0.3s all linear;
-  -moz-transition: 0.3s all linear;
-  -ms-transition: 0.3s all linear;
-  -o-transition: 0.3s all linear;
   transition: 0.3s all linear;
 }
 
